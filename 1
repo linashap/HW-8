@@ -1,0 +1,36 @@
+'''Описать функцию fact2( n ), вычисляющую двойной факториал :n!! =
+1·3·5·...·n, если n — нечетное; n!! = 2·4·6·...·n, если n — четное (n > 0 —
+параметр целого типа. С помощью этой функции найти двойные
+факториалы пяти данных целых чисел'''
+
+
+def factorial(n):
+    fuck=1
+    if n%2==0: 
+        y = 2
+        while y <= n:
+            fuck *=y
+            y += 2 
+        return fuck
+    else:
+        y = 3 
+        while y <= n:
+            fuck *=  y
+            y +=  2
+        return fuck
+
+def main():
+    n=int(input ("Введите n "))
+    counter=0
+    while counter<5:
+       print (factorial(n))
+       n=int(input ("Введите n "))
+       counter+=1
+    else:
+        print("ну вот и все ну вот и все я ухожу из твоей жизни")
+       
+
+
+if __name__ == '__main__':
+    main()
+
